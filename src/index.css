@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Rotaract District 3206 Design System */
+
+@layer base {
+  :root {
+    /* Rotaract Brand Colors */
+    --rotaract-maroon: 0 69% 35%;
+    --rotaract-gold: 45 100% 51%;
+    --rotaract-navy: 223 47% 23%;
+    
+    /* Background System */
+    --background: 0 0% 100%;
+    --background-secondary: 210 20% 98%;
+    --background-glass: 0 0% 100% / 0.8;
+    --foreground: 223 47% 15%;
+
+    /* Card System */
+    --card: 0 0% 100% / 0.9;
+    --card-foreground: 223 47% 15%;
+    --card-glass: 0 0% 100% / 0.1;
+    --card-border: 0 0% 100% / 0.2;
+
+    /* Primary Brand */
+    --primary: 0 69% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 0 69% 30%;
+    --primary-light: 0 69% 95%;
+
+    /* Secondary System */
+    --secondary: 45 100% 51%;
+    --secondary-foreground: 223 47% 15%;
+    --secondary-hover: 45 100% 45%;
+    --secondary-light: 45 100% 95%;
+
+    /* Neutral System */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+    --muted-darker: 210 20% 92%;
+
+    /* Accent System */
+    --accent: 223 47% 23%;
+    --accent-foreground: 0 0% 98%;
+    --accent-light: 223 47% 95%;
+
+    /* Status Colors */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 223 47% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Interface Elements */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 0 69% 35%;
+    --radius: 0.75rem;
+    
+    /* Glass Effects */
+    --glass-bg: 0 0% 100% / 0.1;
+    --glass-border: 0 0% 100% / 0.2;
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-hover)));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--glass-bg)), hsl(var(--card-glass)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Shadows */
+    --shadow-glass: 0 8px 32px 0 rgba(165, 28, 48, 0.1);
+    --shadow-card: 0 4px 16px 0 rgba(165, 28, 48, 0.08);
+    --shadow-lg: 0 10px 30px -10px rgba(165, 28, 48, 0.2);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+  }
+
+  .dark {
+    /* Rotaract Dark Theme */
+    --background: 223 47% 8%;
+    --background-secondary: 223 47% 10%;
+    --background-glass: 223 47% 15% / 0.8;
+    --foreground: 210 40% 98%;
+
+    /* Card System Dark */
+    --card: 223 47% 12% / 0.9;
+    --card-foreground: 210 40% 98%;
+    --card-glass: 0 0% 100% / 0.05;
+    --card-border: 0 0% 100% / 0.1;
+
+    /* Primary Brand Dark */
+    --primary: 0 69% 45%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 0 69% 40%;
+    --primary-light: 0 69% 15%;
+
+    /* Secondary Dark */
+    --secondary: 45 100% 60%;
+    --secondary-foreground: 223 47% 15%;
+    --secondary-hover: 45 100% 55%;
+    --secondary-light: 45 100% 15%;
+
+    /* Neutrals Dark */
+    --muted: 223 47% 15%;
+    --muted-foreground: 215 20% 65%;
+    --muted-darker: 223 47% 12%;
+
+    /* Accent Dark */
+    --accent: 223 47% 18%;
+    --accent-foreground: 210 40% 98%;
+    --accent-light: 223 47% 15%;
+
+    /* Interface Dark */
+    --border: 223 47% 20%;
+    --input: 223 47% 18%;
+    --ring: 0 69% 45%;
+
+    /* Glass Effects Dark */
+    --glass-bg: 0 0% 100% / 0.05;
+    --glass-border: 0 0% 100% / 0.1;
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+
+    /* Shadows Dark */
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    --shadow-card: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  /* Glass Card Components */
+  .glass-card {
+    @apply backdrop-blur-md bg-card/90 border border-card-border rounded-xl;
+    box-shadow: var(--shadow-card);
+  }
+
+  .glass-card-strong {
+    @apply backdrop-blur-lg bg-card border border-card-border rounded-xl;
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Button Variants */
+  .btn-glass {
+    @apply backdrop-blur-md bg-glass-bg border border-glass-border hover:bg-card/50 transition-all duration-300;
+  }
+
+  /* Animations */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg;
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary)) hsl(var(--muted));
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-hover));
+  }
+}
+
+@layer utilities {
+  /* Text Gradients */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
